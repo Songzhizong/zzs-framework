@@ -40,6 +40,13 @@ class RabbitEventListenerManager(
     private val timeout = Duration.ofMinutes(10)
   }
 
+  init {
+    val topic = ExchangeSpecification
+      .exchange(exchange).type("topic").durable(true)
+    sender.declareExchange(topic).block()
+    log.info("declare exchange: $exchange")
+  }
+
 
   @Suppress("UNCHECKED_CAST")
   override fun <T : Event> listen(

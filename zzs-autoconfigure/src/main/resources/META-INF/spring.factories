@@ -1,0 +1,11 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.zzs.framework.autoconfigure.cache.CacheProperties, \
+  com.zzs.framework.autoconfigure.cache.CoroutineCacheAutoConfigure, \
+  com.zzs.framework.autoconfigure.event.properties.EventProperties, \
+  com.zzs.framework.autoconfigure.event.properties.SpringRabbitProperties, \
+  com.zzs.framework.autoconfigure.event.reactive.ReactiveEventAutoConfigure, \
+  com.zzs.framework.autoconfigure.event.reactive.ReactiveEventInitializing, \
+  com.zzs.framework.autoconfigure.id.snowflake.FixedSnowflakeAutoConfigure, \
+  com.zzs.framework.autoconfigure.id.snowflake.RedisSnowflakeAutoConfigure, \
+  com.zzs.framework.autoconfigure.id.IdProperties

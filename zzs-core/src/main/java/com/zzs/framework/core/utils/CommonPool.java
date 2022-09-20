@@ -11,6 +11,7 @@ import java.util.concurrent.*;
 /**
  * @author 宋志宗 on 2022/8/26
  */
+@SuppressWarnings("AlibabaServiceOrDaoClassShouldEndWithImpl")
 public final class CommonPool implements ExecutorService {
   private static final Log log = LogFactory.getLog(CommonPool.class);
   private static final ThreadPoolExecutor EXECUTOR = new ThreadPoolExecutor(

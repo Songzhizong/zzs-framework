@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
  *
  * @author 宋志宗 on 2021/8/5
  */
-@SuppressWarnings("EnhancedSwitchMigration")
+@SuppressWarnings("ALL")
 public class RandomStringUtils {
 
   /**

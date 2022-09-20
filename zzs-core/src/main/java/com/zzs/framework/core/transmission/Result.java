@@ -1,8 +1,8 @@
 package com.zzs.framework.core.transmission;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.zzs.framework.core.json.JsonUtils;
 import com.zzs.framework.core.exception.VisibleException;
+import com.zzs.framework.core.json.JsonUtils;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

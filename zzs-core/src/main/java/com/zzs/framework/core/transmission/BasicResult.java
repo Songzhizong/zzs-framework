@@ -1,7 +1,6 @@
 package com.zzs.framework.core.transmission;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.zzs.framework.core.json.JsonUtils;
 import com.zzs.framework.core.lang.StringUtils;
 
 import javax.annotation.Nonnull;
@@ -34,15 +33,14 @@ public class BasicResult implements Serializable {
   public BasicResult() {
   }
 
-  public static void main(String[] args) {
-    BasicResult result = new BasicResult();
-    result.setSuccess(true);
-    System.out.println(JsonUtils.toJsonString(result));
-  }
-
   @Transient
   public boolean isSucceed() {
     return Boolean.TRUE.equals(success);
+  }
+
+  @Transient
+  public boolean isFailed() {
+    return !isSucceed();
   }
 
   public void setMessage(@Nullable String message) {
@@ -82,10 +80,5 @@ public class BasicResult implements Serializable {
   @Nonnull
   public String getMessage() {
     return message;
-  }
-
-  @Transient
-  public boolean isFailed() {
-    return !isSucceed();
   }
 }

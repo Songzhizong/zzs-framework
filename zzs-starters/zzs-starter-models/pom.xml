@@ -13,5 +13,6 @@
   <modules>
     <module>zzs-starter-model-event-reactive</module>
     <module>zzs-starter-model-cache-coroutine</module>
+    <module>zzs-starter-model-trace-reactive</module>
   </modules>
 </project>

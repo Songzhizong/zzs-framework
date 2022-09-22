@@ -54,5 +54,11 @@
       <version>1.0-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>com.zzs.framework</groupId>
+      <artifactId>zzs-starter-model-trace-reactive</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
 </project>

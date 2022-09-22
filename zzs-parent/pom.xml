@@ -43,6 +43,11 @@
         <artifactId>zzs-starter-event-reactive</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
+      <dependency>
+        <groupId>com.zzs.framework</groupId>
+        <artifactId>zzs-starter-trace-reactive</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 </project>

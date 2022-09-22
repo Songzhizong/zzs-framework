@@ -105,8 +105,7 @@ public final class WebClients {
                                                                @Nullable WebClientOptions options) {
     WebClient.Builder builder = WebClient.builder()
       .clientConnector(new ReactorClientHttpConnector(httpClient))
-//      .filter(TraceExchangeFilterFunction.getInstance())
-      ;
+      .filter(TraceExchangeFilterFunction.getInstance());
     if (options != null) {
       // URI 编码方式
       DefaultUriBuilderFactory.EncodingMode encodingMode = options.getEncodingMode();

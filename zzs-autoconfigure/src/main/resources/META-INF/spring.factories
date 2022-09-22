@@ -7,4 +7,7 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   com.zzs.framework.autoconfigure.event.reactive.ReactiveEventAutoConfigure, \
   com.zzs.framework.autoconfigure.id.snowflake.FixedSnowflakeAutoConfigure, \
   com.zzs.framework.autoconfigure.id.snowflake.RedisSnowflakeAutoConfigure, \
-  com.zzs.framework.autoconfigure.id.IdProperties
+  com.zzs.framework.autoconfigure.id.IdProperties, \
+  com.zzs.framework.autoconfigure.trace.ReactiveTraceAutoConfigure, \
+  com.zzs.framework.autoconfigure.trace.TraceAutoConfigure, \
+  com.zzs.framework.autoconfigure.trace.TraceProperties

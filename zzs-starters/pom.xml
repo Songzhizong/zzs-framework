@@ -12,9 +12,10 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>zzs-starter-event-reactive</module>
-    <module>zzs-starter-models</module>
     <module>zzs-starter</module>
+    <module>zzs-starter-models</module>
+    <module>zzs-starter-trace-reactive</module>
+    <module>zzs-starter-event-reactive</module>
     <module>zzs-starter-cache-coroutine</module>
   </modules>
 </project>

@@ -126,19 +126,13 @@ public final class NumberSystemConverter {
   }
 
   private static char[] getCharArray(int system) {
-    switch (system) {
-      case 26:
-        return chars26;
-      case 32:
-        return chars32;
-      case 36:
-        return chars36;
-      case 52:
-        return chars52;
-      case 58:
-        return chars58;
-      default:
-        return chars62;
-    }
+    return switch (system) {
+      case 26 -> chars26;
+      case 32 -> chars32;
+      case 36 -> chars36;
+      case 52 -> chars52;
+      case 58 -> chars58;
+      default -> chars62;
+    };
   }
 }

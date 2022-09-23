@@ -52,7 +52,7 @@ public final class ExchangeUtils {
    * @return 客户端的原始ip地址
    * @author 宋志宗 on 2022/5/6
    */
-  @Nullable
+  @Nonnull
   public static String getRemoteAddress(@Nonnull ServerWebExchange exchange) {
     ServerHttpRequest request = exchange.getRequest();
     HttpHeaders headers = request.getHeaders();
@@ -70,8 +70,18 @@ public final class ExchangeUtils {
     }
     InetSocketAddress remoteAddress = request.getRemoteAddress();
     if (remoteAddress == null) {
-      return null;
+      return UNKNOWN;
     }
-    return remoteAddress.getHostName();
+    String hostName = remoteAddress.getHostName();
+    if (StringUtils.isNotBlank(hostName)) {
+      return hostName;
+    }
+    return UNKNOWN;
+  }
+
+  @Nullable
+  public static String getUserAgent(@Nonnull ServerWebExchange exchange) {
+    HttpHeaders headers = exchange.getRequest().getHeaders();
+    return headers.getFirst(HttpHeaders.USER_AGENT);
   }
 }

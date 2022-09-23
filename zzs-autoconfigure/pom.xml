@@ -37,6 +37,11 @@
       <optional>true</optional>
     </dependency>
     <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-webflux</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
       <groupId>io.projectreactor.rabbitmq</groupId>
       <artifactId>reactor-rabbitmq</artifactId>
       <scope>provided</scope>

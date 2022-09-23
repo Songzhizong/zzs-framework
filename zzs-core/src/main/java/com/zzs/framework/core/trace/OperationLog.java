@@ -1,6 +1,7 @@
 package com.zzs.framework.core.trace;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 /**
  * 操作日志
@@ -54,6 +55,14 @@ public class OperationLog {
   /** 执行信息, 可用于记录错误信息 */
   @Nonnull
   private String message = "";
+
+  /** 变更前 */
+  @Nullable
+  private String before;
+
+  /** 变更后 */
+  @Nullable
+  private String after;
 
   /** 耗时, 单位毫秒 */
   private int consuming = -1;
@@ -177,6 +186,26 @@ public class OperationLog {
 
   public OperationLog setMessage(@Nonnull String message) {
     this.message = message;
+    return this;
+  }
+
+  @Nullable
+  public String getBefore() {
+    return before;
+  }
+
+  public OperationLog setBefore(@Nullable String before) {
+    this.before = before;
+    return this;
+  }
+
+  @Nullable
+  public String getAfter() {
+    return after;
+  }
+
+  public OperationLog setAfter(@Nullable String after) {
+    this.after = after;
     return this;
   }
 

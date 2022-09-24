@@ -1,8 +1,7 @@
-package com.zzs.framework.core.event.impl
+package com.zzs.framework.core.event.coroutine
 
 import com.zzs.framework.core.event.Event
 import com.zzs.framework.core.event.EventListener
-import com.zzs.framework.core.event.EventListenerManager
 import com.zzs.framework.core.json.JsonUtils
 import com.zzs.framework.core.spring.RedisTemplateUtils
 import kotlinx.coroutines.CoroutineScope

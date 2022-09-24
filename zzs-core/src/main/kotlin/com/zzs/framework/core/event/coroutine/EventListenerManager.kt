@@ -1,5 +1,7 @@
-package com.zzs.framework.core.event
+package com.zzs.framework.core.event.coroutine
 
+import com.zzs.framework.core.event.Event
+import com.zzs.framework.core.event.EventListener
 import kotlinx.coroutines.CoroutineScope
 
 /**

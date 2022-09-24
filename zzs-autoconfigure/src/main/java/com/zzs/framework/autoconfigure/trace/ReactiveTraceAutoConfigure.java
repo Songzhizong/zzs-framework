@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
 @ConditionalOnClass(ReactiveTraceModel.class)
 public class ReactiveTraceAutoConfigure {
 
-  @Value("spring.application.name:")
+  @Value("${spring.application.name:}")
   private String applicationName;
 
   @Bean

@@ -41,6 +41,15 @@ public class CacheProperties {
   }
 
   @Nonnull
+  public String formatKey(@Nonnull String key) {
+    String prefix = formattedPrefix();
+    if (StringUtils.isBlank(prefix)) {
+      return key;
+    }
+    return prefix + ":" + key;
+  }
+
+  @Nonnull
   public String getPrefix() {
     return prefix;
   }

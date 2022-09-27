@@ -1,4 +1,4 @@
-package com.zzs.framework.autoconfigure.event.reactive;
+package com.zzs.framework.autoconfigure.event;
 
 import com.rabbitmq.client.Address;
 import com.rabbitmq.client.ConnectionFactory;

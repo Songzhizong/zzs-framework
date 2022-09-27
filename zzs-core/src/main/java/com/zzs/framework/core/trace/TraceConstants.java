@@ -10,9 +10,9 @@ public interface TraceConstants {
   String CTX_KEY = "_$ZZS$TRACE:CONTEXT#$$$$$$";
 
   @Nonnull
-  String TRACE_ID_HEADER_NAME = "X-Trace-Id";
+  String TRACE_ID_HEADER_NAME = "x-ideal-trace-id";
 
   @Nonnull
-  String SPAN_ID_HEADER_NAME = "X-Span-Id";
+  String SPAN_ID_HEADER_NAME = "x-ideal-span-id";
 
 }

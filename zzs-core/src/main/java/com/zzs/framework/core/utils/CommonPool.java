@@ -13,6 +13,7 @@ import java.util.concurrent.*;
  * @author 宋志宗 on 2022/9/24
  */
 public enum CommonPool implements ExecutorService {
+  /** instance */
   INSTANCE;
 
   private static final Log log = LogFactory.getLog(CommonPool.class);
@@ -43,14 +44,17 @@ public enum CommonPool implements ExecutorService {
       int finalMaximumPoolSize = maximumPoolSize;
       SCHEDULED.scheduleAtFixedRate(() -> {
         int poolSize = EXECUTOR.getPoolSize();
-        int activeCount = EXECUTOR.getActiveCount();
-        long taskCount = EXECUTOR.getTaskCount();
-        log.debug("poolSize=" + poolSize + ", maximumPoolSize=" + finalMaximumPoolSize +
-          ", activeCount=" + activeCount + ", taskCount=" + taskCount);
+        if (poolSize > 0) {
+          int activeCount = EXECUTOR.getActiveCount();
+          long taskCount = EXECUTOR.getTaskCount();
+          log.debug("CommonPool(poolSize=" + poolSize + ", maximumPoolSize=" + finalMaximumPoolSize +
+            ", activeCount=" + activeCount + ", taskCount=" + taskCount + ")");
+        }
       }, 30, 30, TimeUnit.SECONDS);
     } else {
       SCHEDULED = null;
     }
+    Runtime.getRuntime().addShutdownHook(new Thread(CommonPool.INSTANCE::shutdown));
   }
 
   @Override
